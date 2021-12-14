@@ -26,7 +26,15 @@ const staffSchema = mongoose.Schema({
   isDoctor: {
     type: Boolean,
     required: true,
-    default: false
+    default: false,
+    specialty: {
+      type: string,
+      required: true,
+    },
+    location: {
+      type: string,
+      required: true,
+    }
   },
 
   isSurgeon: {
