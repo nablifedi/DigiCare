@@ -1,32 +1,38 @@
-const mongoose = require("mongoose")
+import mongoose from 'mongoose'
 
-const PersonSchema = mongoose.Schema({
-    CIN: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    familyName: {
-        type: String,
-        required: true
-    },
-    birthDate: {
-        type: Date,
-        required: true
-    },
-    gender: {
-        type: String,
-        required: true
-    },
-    homeAddress: {
-        type: String,
-        required: true
-    },
-    phoneNumber: {
-        type: String,
-        required: true
-    }
+const personSchema = mongoose.Schema({
+  cin: {
+    type: Number,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  familyName: {
+    type: String,
+    required: true
+  },
+  birthDate: {
+    type: Date,
+    required: true
+  },
+  gender: {
+    type: String,
+    required: true
+  },
+  homeAddress: {
+    type: String,
+    required: true
+  },
+  phoneNumber: {
+    type: Number,
+    required: true
+  }
+}, {
+  timestamps: true
 })
+
+const Person = mongoose.model('Person', personSchema)
+
+export default Person
