@@ -22,27 +22,17 @@ const staffSchema = mongoose.Schema({
     required: true,
     default: false
   },
-
   isDoctor: {
     type: Boolean,
     required: true,
-    default: false,
-    specialty: {
-      type: string,
-      required: true,
-    },
-    location: {
-      type: string,
-      required: true,
-    }
+    default: false
   },
-
   isSurgeon: {
     type: Boolean,
     required: true,
     default: false
   },
-  isFrant_desk: {
+  isFrantDesk: {
     type: Boolean,
     required: true,
     default: false
@@ -62,12 +52,11 @@ const staffSchema = mongoose.Schema({
     required: true,
     default: false
   },
-  isSurgical_Technologist: {
+  isSurgicalTechnologist: {
     type: Boolean,
     required: true,
     default: false
-  },
-  
+  }
 },
  {
   timestamps: true
