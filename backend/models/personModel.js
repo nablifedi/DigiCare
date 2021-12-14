@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const PersonSchema = mongoose.Schema({
-    id: {
+    CIN: {
         type: String,
         required: true
     },
@@ -13,7 +13,7 @@ const PersonSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    bithDate: {
+    birthDate: {
         type: Date,
         required: true
     },
@@ -29,4 +29,4 @@ const PersonSchema = mongoose.Schema({
         type: String,
         required: true
     }
-});
+})
