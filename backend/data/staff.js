@@ -9,7 +9,7 @@ const staffSchema = new Schema({
     certificate: String,
     language: String,
   }
- 
+
 })
 
 const staff = mongoose.model("staff", userSchema);
