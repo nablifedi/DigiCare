@@ -6,10 +6,30 @@ const patientSchema = mongoose.Schema({
     required: true,
     ref: 'Person'
   },
-  acceptedDate: {
+ ID: {
+    type: string,
+    required: true
+  },
+  AcceptedDate: {
     type: Date,
     required: true
-  }
+  },
+  Sickness: {
+    type :history,
+    required: true,
+  },
+  Prescriptions: {
+    type: String,
+    required: true
+  },
+ allergies: {
+    type: String,
+    required: true
+  },
+  SpecialReqs: {
+    type: String,
+    required: true
+  },
 }, {
   timestamps: true
 })
