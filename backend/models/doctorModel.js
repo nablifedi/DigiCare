@@ -10,11 +10,10 @@ const doctorSchema = mongoose.Schema({
     type: String,
     required: true  
   },
-},
- {
+}, {
   timestamps: true
 })
 
-const Doctor = mongoose.model('Doctor', doctorSchema);
+const Doctor = mongoose.model('Doctor', doctorSchema)
 
 export default Doctor

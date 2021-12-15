@@ -6,27 +6,31 @@ const patientSchema = mongoose.Schema({
     required: true,
     ref: 'Person'
   },
- ID: {
-    type: string,
-    required: true
-  },
-  AcceptedDate: {
+  acceptedDate: {
     type: Date,
     required: true
   },
-  Sickness: {
+  sickness: {
     type :history,
     required: true,
   },
-  Prescriptions: {
-    type: String,
-    required: true
-  },
- allergies: {
-    type: String,
-    required: true
-  },
-  SpecialReqs: {
+  prescriptions: [
+    {
+      prescription: {
+        type: String,
+        required: true
+      }
+    }
+  ],
+  allergies: [
+    {
+      allergy: {
+        type: String,
+        required: true
+      }
+    }
+  ],
+  specialReqs: {
     type: String,
     required: true
   },

@@ -62,11 +62,10 @@ const staffSchema = mongoose.Schema({
     required: true,
     default: false
   }
-},
- {
+}, {
   timestamps: true
 })
 
-const Staff = mongoose.model('Staff', staffSchema);
+const Staff = mongoose.model('Staff', staffSchema)
 
 export default Staff
