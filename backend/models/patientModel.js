@@ -1,5 +1,24 @@
 import mongoose from 'mongoose'
 
+const historySchema = mongoose.Schema({
+  sickness: {
+    type: String,
+    required: true
+  },
+  date: {
+    from: {
+      type: Date,
+      required: true
+    },
+    to: {
+      type: Date,
+      required: true
+    }
+  }
+}, {
+  timestamps: true
+})
+
 const patientSchema = mongoose.Schema({
   person: {
     type: mongoose.Schema.Types.ObjectId,
@@ -10,10 +29,7 @@ const patientSchema = mongoose.Schema({
     type: Date,
     required: true
   },
-  sickness: {
-    type :history,
-    required: true,
-  },
+  sickness: [historySchema],
   prescriptions: [
     {
       prescription: {

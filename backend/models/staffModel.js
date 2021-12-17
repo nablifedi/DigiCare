@@ -1,10 +1,19 @@
 import mongoose from 'mongoose'
+import bcrypt from 'bcryptjs'
 
 const staffSchema = mongoose.Schema({
   person: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Person'
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
   },
   joined: {
     type: Date,
@@ -64,6 +73,18 @@ const staffSchema = mongoose.Schema({
   }
 }, {
   timestamps: true
+})
+
+staffSchema.methods.matchPassword = async function(enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password)
+}
+
+staffSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
+    next()
+  }
+  const salt = await bcrypt.genSalt(10)
+  this.password = await bcrypt.hash(this.password, salt)
 })
 
 const Staff = mongoose.model('Staff', staffSchema)

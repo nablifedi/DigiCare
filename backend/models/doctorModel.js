@@ -10,6 +10,14 @@ const doctorSchema = mongoose.Schema({
     type: String,
     required: true  
   },
+  locations: [
+    {
+      location: {
+        type: String,
+        required: true
+      }
+    }
+  ]
 }, {
   timestamps: true
 })
