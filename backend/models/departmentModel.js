@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const wardSchema = mongoose.Schema({
+const departmentSchema = mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -17,6 +17,6 @@ const wardSchema = mongoose.Schema({
   timestamps: true,
 })
 
-const Ward = mongoose.model('Ward', wardSchema)
+const Deparment = mongoose.model('Department', departmentSchema)
 
-export default Ward
+export default Deparment
