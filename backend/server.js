@@ -8,6 +8,7 @@ import personRoutes from './routes/personRoutes.js'
 import patientRoutes from './routes/patientRoutes.js'
 import hospitalRoutes from './routes/hospitalRoutes.js'
 import departmentRoutes from './routes/departmentRoutes.js'
+import doctorRoutes from './routes/doctorRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 
 dotenv.config()
@@ -19,6 +20,7 @@ app.use('/api/persons', personRoutes)
 app.use('/api/patients', patientRoutes)
 app.use('/api/hospitals', hospitalRoutes)
 app.use('/api/departments', departmentRoutes)
+app.use('/api/doctors', doctorRoutes)
 app.use('/api/upload', uploadRoutes)
 
 const __dirname = path.resolve()
