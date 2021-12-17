@@ -17,6 +17,6 @@ const departmentSchema = mongoose.Schema({
   timestamps: true,
 })
 
-const Deparment = mongoose.model('Department', departmentSchema)
+const Department = mongoose.model('Department', departmentSchema)
 
-export default Deparment
+export default Department

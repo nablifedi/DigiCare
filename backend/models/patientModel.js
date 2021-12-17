@@ -5,15 +5,13 @@ const historySchema = mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
-    from: {
-      type: Date,
-      required: true
-    },
-    to: {
-      type: Date,
-      required: true
-    }
+  from: {
+    type: Date,
+    required: true
+  },
+  to: {
+    type: Date,
+    required: true
   }
 }, {
   timestamps: true
