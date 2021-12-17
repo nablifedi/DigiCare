@@ -46,7 +46,7 @@ const staffSchema = mongoose.Schema({
     required: true,
     default: false
   },
-  isFrantDesk: {
+  isFrontDesk: {
     type: Boolean,
     required: true,
     default: false
@@ -67,6 +67,11 @@ const staffSchema = mongoose.Schema({
     default: false
   },
   isSurgicalTechnologist: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  isAdmin: {
     type: Boolean,
     required: true,
     default: false
